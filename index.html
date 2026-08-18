@@ -84,26 +84,36 @@
       border-radius: 20px;
       font-size: 0.9em;
     }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+    .projects-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
     }
-    .project {
-      background: #fdf6ec;
-      border-radius: 14px;
-      padding: 20px;
+    .projects-table table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 560px;
     }
-    .project h3 {
-      margin: 0 0 8px;
-      color: var(--text);
+    .projects-table th, .projects-table td {
+      text-align: left;
+      padding: 12px 14px;
+      border-bottom: 1px solid #ffe8d6;
+      vertical-align: top;
     }
-    .project p {
-      color: var(--muted);
+    .projects-table th {
+      color: var(--accent);
       font-size: 0.95em;
-      margin: 0 0 10px;
+      white-space: nowrap;
     }
-    .project a {
+    .projects-table td {
+      color: var(--text);
+      font-size: 0.95em;
+    }
+    .projects-table tr:last-child td {
+      border-bottom: none;
+    }
+    .projects-table a {
       color: var(--accent);
       font-weight: 600;
       text-decoration: none;
@@ -167,23 +177,42 @@
 
   <section id="projects">
     <div class="card">
-      <h2>ผลงาน</h2>
-      <div class="projects">
-        <div class="project">
-          <h3>[ชื่อโปรเจกต์ 1]</h3>
-          <p>[คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์นี้]</p>
-          <a href="#">ดูโปรเจกต์ →</a>
-        </div>
-        <div class="project">
-          <h3>[ชื่อโปรเจกต์ 2]</h3>
-          <p>[คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์นี้]</p>
-          <a href="#">ดูโปรเจกต์ →</a>
-        </div>
-        <div class="project">
-          <h3>[ชื่อโปรเจกต์ 3]</h3>
-          <p>[คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์นี้]</p>
-          <a href="#">ดูโปรเจกต์ →</a>
-        </div>
+      <h2>ผลงานที่เคยทำ</h2>
+      <div class="projects-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ชื่องาน</th>
+              <th>รายละเอียด</th>
+              <th>เทคโนโลยี</th>
+              <th>ปี</th>
+              <th>ลิงก์</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>[ชื่อโปรเจกต์ 1]</td>
+              <td>[คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์นี้]</td>
+              <td>[เช่น HTML, CSS, JS]</td>
+              <td>[2026]</td>
+              <td><a href="#">ดูโปรเจกต์ →</a></td>
+            </tr>
+            <tr>
+              <td>[ชื่อโปรเจกต์ 2]</td>
+              <td>[คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์นี้]</td>
+              <td>[เช่น Python, SQL]</td>
+              <td>[2026]</td>
+              <td><a href="#">ดูโปรเจกต์ →</a></td>
+            </tr>
+            <tr>
+              <td>[ชื่อโปรเจกต์ 3]</td>
+              <td>[คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์นี้]</td>
+              <td>[เช่น React, Node.js]</td>
+              <td>[2026]</td>
+              <td><a href="#">ดูโปรเจกต์ →</a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
