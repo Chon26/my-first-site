@@ -3,37 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>เรียนกิตฮับ</title>
+  <title>พอร์ตโฟลิโอ | [ชื่อของคุณ]</title>
   <style>
+    :root {
+      --accent: #d2691e;
+      --bg: #fdf6ec;
+      --card: #ffffff;
+      --text: #333;
+      --muted: #666;
+    }
+    * { box-sizing: border-box; }
     body {
       font-family: "Segoe UI", sans-serif;
       background: linear-gradient(135deg, #fdf6ec, #ffe8d6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      color: var(--text);
       margin: 0;
+      line-height: 1.6;
+    }
+    header {
       text-align: center;
+      padding: 80px 20px 40px;
+    }
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      background: #eee;
+    }
+    header h1 {
+      margin: 20px 0 5px;
+      color: var(--accent);
+      font-size: 2.2em;
+    }
+    header p.role {
+      color: var(--muted);
+      font-size: 1.1em;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover { text-decoration: underline; }
+    section {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
     }
     .card {
-      background: white;
-      padding: 40px 50px;
+      background: var(--card);
+      padding: 35px 40px;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
-    h1 {
-      color: #d2691e;
-      margin-bottom: 10px;
+    h2 {
+      color: var(--accent);
+      margin-top: 0;
+      border-bottom: 2px solid #ffe8d6;
+      padding-bottom: 10px;
     }
-    p {
-      color: #555;
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skills span {
+      background: #ffe8d6;
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9em;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background: #fdf6ec;
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .project h3 {
+      margin: 0 0 8px;
+      color: var(--text);
+    }
+    .project p {
+      color: var(--muted);
+      font-size: 0.95em;
+      margin: 0 0 10px;
+    }
+    .project a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-list a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 30px 20px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🎉 สวัสดีชาวเพื่อน!</h1>
-    <p>นี่คือเว็บไซต์แรกของฉันที่ deploy ด้วย GitHubแก้ไขแล้วจ้า</p>
-  </div>
+
+  <header>
+    <img src="https://via.placeholder.com/140" alt="รูปโปรไฟล์">
+    <h1>[ชื่อของคุณ]</h1>
+    <p class="role">[ตำแหน่ง / สายงาน เช่น Web Developer]</p>
+  </header>
+
+  <nav>
+    <a href="#about">เกี่ยวกับฉัน</a>
+    <a href="#skills">ทักษะ</a>
+    <a href="#projects">ผลงาน</a>
+    <a href="#contact">ติดต่อ</a>
+  </nav>
+
+  <section id="about">
+    <div class="card">
+      <h2>เกี่ยวกับฉัน</h2>
+      <p>
+        [เขียนแนะนำตัวสั้นๆ ที่นี่ เช่น พื้นเพ ความสนใจ เป้าหมายในสายงาน
+        หรือสิ่งที่ทำให้คุณแตกต่างจากคนอื่น]
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="card">
+      <h2>ทักษะ</h2>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>[ทักษะอื่นๆ]</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="card">
+      <h2>ผลงาน</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>[ชื่อโปรเจกต์ 1]</h3>
+          <p>[คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์นี้]</p>
+          <a href="#">ดูโปรเจกต์ →</a>
+        </div>
+        <div class="project">
+          <h3>[ชื่อโปรเจกต์ 2]</h3>
+          <p>[คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์นี้]</p>
+          <a href="#">ดูโปรเจกต์ →</a>
+        </div>
+        <div class="project">
+          <h3>[ชื่อโปรเจกต์ 3]</h3>
+          <p>[คำอธิบายสั้นๆ เกี่ยวกับโปรเจกต์นี้]</p>
+          <a href="#">ดูโปรเจกต์ →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>ติดต่อ</h2>
+      <ul class="contact-list">
+        <li>📧 <a href="mailto:you@example.com">you@example.com</a></li>
+        <li>💼 <a href="#">LinkedIn</a></li>
+        <li>🐙 <a href="#">GitHub</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 [ชื่อของคุณ]. สร้างด้วย ❤️ และ GitHub Pages
+  </footer>
+
 </body>
 </html>
